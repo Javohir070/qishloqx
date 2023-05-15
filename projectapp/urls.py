@@ -19,6 +19,8 @@ urlpatterns = [
 
     path('user/',userbr,name='user'),
     path('hisobot/',hisobotlar,name='hisobot'),
+    path('malumot_br/',mal_biriktirish,name='malumot_br'),
+
 
 
 

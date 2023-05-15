@@ -41,6 +41,9 @@ def create_pump(request):
 def index(request):
    
     return render(request,'index.html')
+def mal_biriktirish(request):
+   
+    return render(request,'malumotbiriktirish.html')
 
 def userbr(request):
    

@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<div class="content">
+
+    <!-- Start Content-->
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <!-- <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
+                            <li class="breadcrumb-item active">Create Project</li>
+                        </ol> -->
+                    </div>
+                    <h4 class="page-title">Qurilmani qo'shish</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="mb-3">
+                                    <label for="projectname" class="form-label">Nomi</label>
+                                    <input type="text" id="projectname" class="form-control" placeholder="nomi">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="projectname" class="form-label">S/N</label>
+                                    <input type="text" id="projectname" class="form-control" placeholder=" ">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="project-overview" class="form-label">Qo'shimcha ma'lumotlar</label>
+                                    <textarea class="form-control" id="project-overview" rows="5"
+                                        placeholder="..."></textarea>
+                                </div>
+
+
+
+
+                                <div class="mb-3">
+                                    <label class="form-label">Sana</label>
+                                    <input type="text" class="form-control" data-toggle="flatpicker"
+                                        placeholder="October 9, 2019">
+                                </div>
+
+
+
+
+
+
+
+                                <div class="mb-3">
+                                    <label for="project-budget" class="form-label">Masul shaxs</label>
+                                    <input type="text" id="project-budget" class="form-control" placeholder="">
+                                </div>
+
+                            </div> <!-- end col-->
+
+                            <div class="col-xl-6">
+                                <div class="my-3 mt-xl-0">
+                                    <label for="projectname" class="mb-0 form-label">Rasm</label>
+                                    <p class="text-muted font-14">Tavsiya etilgan eskiz oʻlchami 800x400 (px).</p>
+
+                                    <form action="/" method="post" class="dropzone" id="myAwesomeDropzone"
+                                        data-plugin="dropzone" data-previews-container="#file-previews"
+                                        data-upload-preview-template="#uploadPreviewTemplate">
+                                        <div class="fallback">
+                                            <input name="file" type="file" />
+                                        </div>
+
+                                        <div class="dz-message needsclick">
+                                            <i class="h3 text-muted dripicons-cloud-upload"></i>
+                                            <h4>Fayllarni shu yerga tashlang yoki yuklash uchun bosing.</h4>
+                                        </div>
+                                    </form>
+
+                                    <!-- Preview -->
+                                    <div class="dropzone-previews mt-3" id="file-previews"></div>
+
+                                    <!-- file preview template -->
+                                    <div class="d-none" id="uploadPreviewTemplate">
+                                        <div class="card mt-1 mb-0 shadow-none border">
+                                            <div class="p-2">
+                                                <div class="row align-items-center">
+                                                    <div class="col-auto">
+                                                        <img data-dz-thumbnail src="#"
+                                                            class="avatar-sm rounded bg-light" alt="">
+                                                    </div>
+                                                    <div class="col ps-0">
+                                                        <a href="javascript:void(0);" class="text-muted fw-bold"
+                                                            data-dz-name></a>
+                                                        <p class="mb-0" data-dz-size></p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <!-- Button -->
+                                                        <a href="" class="btn btn-link btn-lg text-muted"
+                                                            data-dz-remove>
+                                                            <i class="mdi mdi-close"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end file preview template -->
+                                </div>
+
+                                <div>
+                                    <label for="project-overview" class="form-label">Viloyatlar</label>
+
+                                    <select class="form-control" data-toggle="select2" data-width="100%">
+
+                                        <option>viloyat</option>
+                                        <option value="Toshkent">Toshkent</option>
+                                        <option value="Andijon">Andijon</option>
+                                        <option value="Namangan">Namangan</option>
+                                        <option value="Farg'ona">Farg'ona</option>
+                                        <option value="Sirdaryo">Sirdaryo</option>
+                                        <option value="Jizzax">Jizzax</option>
+                                        <option value="Samarqand">Samarqand</option>
+                                        <option value="Qashqadaryo">Qashqadaryo</option>
+                                        <option value="Surxondaryo">Surxondaryo</option>
+                                        <option value="Buxoro">Buxoro</option>
+                                        <option value="Navoiy">Navoiy</option>
+                                        <option value="Xorazm">Xorazm</option>
+                                        <option value="Qoraqalpog'iston">Qoraqalpog'iston</option>
+                                    </select>
+                                </div>
+                                <br>
+
+
+
+                                <div><br>
+
+                                    <label for="project-overview" class="form-label">Tumantlar</label>
+
+                                    <select class="form-control" data-toggle="select2" data-width="100%">
+                                        <option>Tuman</option>
+                                        <option value="Toshkent_shahar">Toshkent_shahar</option>
+                                        <option value="Bekobod">Bekobod</option>
+                                        <option value="Boʻstonliq">Boʻstonliq</option>
+                                        <option value="Boʻka">Boʻka</option>
+                                        <option value="Chinoz">Chinoz</option>
+                                        <option value="Qibray">Qibray</option>
+                                        <option value="	Ohangaron"> Ohangaron</option>
+                                        <option value="Oqqoʻrgʻon">Oqqoʻrgʻon</option>
+                                        <option value="Parkent">Parkent</option>
+                                        <option value="Piskent">Piskent</option>
+                                        <option value="Quyi_chirchiq">Quyi_chirchiq</option>
+                                        <option value="Oʻrta_Chirchiq">Oʻrta_Chirchiq</option>
+                                        <option value="Yangiyoʻl">Yangiyoʻl</option>
+                                        <option value="Yuqori Chirchiq">Yuqori Chirchiq</option>
+                                        <option value="Zangiota ">Zangiota </option>
+
+                                    </select>
+
+
+
+                                </div>
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <button type="button" class="btn btn-success waves-effect waves-light m-1"><i
+                                        class="fe-check-circle me-1"></i> Saqlash</button>
+                                <!-- <button type="button" class="btn btn-light waves-effect waves-light m-1"><i class="fe-x me-1"></i> Cancel</button> -->
+                            </div>
+                        </div>
+
+                    </div> <!-- end card-body -->
+                </div> <!-- end card-->
+            </div> <!-- end col-->
+        </div>
+        <!-- end row-->
+
+    </div> <!-- container -->
+
+</div>
+
+{% endblock main %}
