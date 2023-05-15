@@ -2,102 +2,183 @@
 {% load static %}
 
 {% block main %}
-                <div class="content">
+<div class="content">
 
-                    <!-- Start Content-->
-                    <div class="container-fluid">
+    <!-- Start Content-->
+    <div class="container-fluid">
 
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Ecommerce</a></li>
-                                            <li class="breadcrumb-item active">Customers</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Customers</h4>
-                                </div>
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <!-- <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Ecommerce</a></li>
+                            <li class="breadcrumb-item active">Foydalanuvchilar</li> -->
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Foydalanuvchilar</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-sm-4">
+                                <a href="./userbr.html" class="btn btn-danger mb-2"><i
+                                        class="mdi mdi-plus-circle me-2"></i> User qo'shish</a>
                             </div>
+                            <div class="col-sm-8">
+                                <div class="text-sm-end">
+                                    <button type="button" class="btn btn-success mb-2 me-1"><i
+                                            class="mdi mdi-cog"></i></button>
+                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
+                                    <button type="button" class="btn btn-light mb-2">Export</button>
+                                </div>
+                            </div><!-- end col-->
                         </div>
-                        <!-- end page title -->
+
                         <div class="table-responsive">
-                                            <table class="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 20px;">
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck1">
-                                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
-                                                            </div>
-                                                        </th>
-                                                        <th>Name</th>
-                                                        <th>StartDate</th>
-                                                        <th>yil_mal</th>
-                                                        <th>oy_mal</th>
-                                                        <th>kun_mal</th>
-                                                        <th>soat_mal</th>
-                                                        <th>viloyat</th>
-                                                        <th>tuman</th>
-                                                        <th style="width: 70px;">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                   {% for pump in pumps %}
-                                                        <tr>
-                                                            <td>
-                                                                <div class="form-check">
-                                                                    <input type="checkbox" class="form-check-input" id="customCheck2">
+                            <table class="table table-centered table-striped dt-responsive nowrap w-100"
+                                id="products-datatable">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 20px;">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                            </div>
+                                        </th>
+                                        <th>F.I.Sh</th>
+                                        <th>Telefon raqami</th>
+                                        <th>Lavozimi</th>
+                                        <th>Ish joyi</th>
+                                        <th>Login</th>
+                                        <th>Paroli</th>
+                                        <th style="width: 75px;">Harakat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                <label class="form-check-label" for="customCheck2">ABC</label>
+                                            </div>
+                                        </td>
+                                        <td class="table-user">
+                                            <img src="{% static 'static/images/users/user-4.jpg' %}" alt="table-user"
+                                                class="me-2 rounded-circle">
+                                            <a href="javascript:void(0);" class="text-body fw-semibold">Makhmudjanov
+                                                Sarvar Ulugbekovich</a>
+                                        </td>
+                                        <td>+998998645067</td>
+                                        <td>
+                                            Loyiha rahbari
+                                        </td>
+                                        <td>
+                                            TUIT
+                                        </td>
+                                        <td>
+                                            admin@gmail.com
+                                        </td>
+                                        <td>
+                                            *****
+                                        </td>
 
+                                        <td>
+                                            <a href="javascript:void(0);" class="action-icon"> <i
+                                                    class="mdi mdi-square-edit-outline"></i></a>
+                                            <a href="javascript:void(0);" class="action-icon"> <i
+                                                    class="mdi mdi-delete"></i></a>
+                                        </td>
+                                    </tr>
 
-                                                                    {% comment %} <label class="form-check-label" for="customCheck2">ABC</label> {% endcomment %}
-                                                                </div>
-                                                            </td>
-                                                            <td class="table-user">
-                                                                <img src="{{ pump.image.url }}" alt="table-user" class="me-2 rounded-circle">
-                                                                <a href="javascript:void(0);" class="text-body fw-semibold">{{ pump.name }}</a>
-                                                            </td>
-                                                            <td>{{ pump.StartDate }}</td>
-                                                            <td>
-                                                                ${{ pump.umumiy_mal }}
-                                                            </td>
-                                                            <td>
-                                                            <small class="text-muted"> {{ pump.oy_mal }}</small>
-                                                            </td>
-                                                            <td>
-                                                              <small class="text-muted">{{ pump.kun_mal }}</small>
-                                                            </td>
-                                                            <td>
-                                                             <small class="text-muted">{{ pump.soat_mal }}</small>
-                                                             </td>
-                                                            <td>
-                                                                {{ pump.province }}
-                                                            </td>
-                                                            <td>
-                                                                {{ pump.subprovince }}
-                                                            </td>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck3">
+                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        <td class="table-user">
+                                            <img src="{% static 'static/images/users/user-3.jpg' %}" alt="table-user"
+                                                class="me-2 rounded-circle">
+                                            <a href="javascript:void(0);" class="text-body fw-semibold">Kuchkarov
+                                                Muslimjon Adhamjon ugli</a>
+                                        </td>
+                                        <td>
+                                            +998991082787
+                                        </td>
+                                        <td>
+                                            Dasturchi
+                                        </td>
+                                        <td>
+                                            TUIT
+                                        </td>
+                                        <td>muslimjon@gmail.com</td>
+                                        <td>
+                                            *****
+                                        </td>
 
-                                                            <td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="action-icon"> <i
+                                                    class="mdi mdi-square-edit-outline"></i></a>
+                                            <a href="javascript:void(0);" class="action-icon"> <i
+                                                    class="mdi mdi-delete"></i></a>
+                                        </td>
+                                    </tr>
 
-                                                                <a href="{%url 'pump_delete' pk=pump.pk %}" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                            </td>
-                                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck3">
+                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        <td class="table-user">
+                                            <img src="{% static 'static/images/users/user-3.jpg' %}" alt="table-user"
+                                                class="me-2 rounded-circle">
+                                            <a href="javascript:void(0);" class="text-body fw-semibold">Ruzikulov
+                                                Rizamat Azamat ugli</a>
+                                        </td>
+                                        <td>
+                                            +998991131112
+                                        </td>
+                                        <td>
+                                            Loyiha Ishtirokchisi
+                                        </td>
+                                        <td>
+                                            TUIT
+                                        </td>
+                                        <td>rizamat@gmail.com</td>
+                                        <td>
+                                            ******
+                                        </td>
 
-
-                                                   {% endfor %}
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
+                                        <td>
+                                            <a href="javascript:void(0);" class="action-icon"> <i
+                                                    class="mdi mdi-square-edit-outline"></i></a>
+                                            <a href="javascript:void(0);" class="action-icon"> <i
+                                                    class="mdi mdi-delete"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- end row -->
+                    </div> <!-- end card-body-->
+                </div> <!-- end card-->
+            </div> <!-- end col -->
+        </div>
+        <!-- end row -->
 
-                    </div> <!-- container -->
+    </div> <!-- container -->
 
-                </div> <!-- content -->
+</div>
 {% endblock main %}
