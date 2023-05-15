@@ -45,6 +45,7 @@ def index(request):
 def userbr(request):
    
     return render(request,'userbr.html')
+    
 def hisobotlar(request):
 
     return render(request,'hisobotlar.html')
