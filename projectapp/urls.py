@@ -17,7 +17,10 @@ urlpatterns = [
     path('ll/',GetSubprovince.as_view(),name='province'),
     path('users/',users,name='users'),
 
-    # path('tuman/',users,name='tuman'),
+    path('user/',userbr,name='user'),
+    path('hisobot/',hisobotlar,name='hisobot'),
+
+
 
     path('login/',user_login,name='user_login'),
     path('cre/<int:pk>/',getsubprovince,name='getsubprovince'),

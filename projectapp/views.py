@@ -42,6 +42,13 @@ def index(request):
    
     return render(request,'index.html')
 
+def userbr(request):
+   
+    return render(request,'userbr.html')
+def hisobotlar(request):
+
+    return render(request,'hisobotlar.html')
+
 
 def semantik(request):
     qs = Province.objects.all()
