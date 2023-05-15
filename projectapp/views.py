@@ -170,7 +170,7 @@ def tuman(request):
     ctx = {
         'tuman':tuman
     }
-    return render(request,'tumann.html',ctx)
+    return render(request,'tuman.html',ctx)
 
 
 

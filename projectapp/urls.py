@@ -16,7 +16,9 @@ urlpatterns = [
     path('ff/',GetProvince.as_view(),name='getprovince'),
     path('ll/',GetSubprovince.as_view(),name='province'),
     path('users/',users,name='users'),
-    
+
+    # path('tuman/',users,name='tuman'),
+
     path('login/',user_login,name='user_login'),
     path('cre/<int:pk>/',getsubprovince,name='getsubprovince'),
    
