@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<div class="content">
+
+    <!-- Start Content-->
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <form class="d-flex align-items-center mb-3">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control border" id="dash-daterange">
+                                <span class="input-group-text bg-blue border-blue text-white">
+                                    <i class="mdi mdi-calendar-range"></i>
+                                </span>
+                            </div>
+                            <a href="javascript: void(0);" class="btn btn-blue btn-sm ms-2">
+                                <i class="mdi mdi-autorenew"></i>
+                            </a>
+                            <a href="javascript: void(0);" class="btn btn-blue btn-sm ms-1">
+                                <i class="mdi mdi-filter-variant"></i>
+                            </a>
+                        </form>
+                    </div>
+                    <h4 class="page-title">O'zbekiston maydoni nasos stansiyasi </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="card widget-inline">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-2 text-center">
+                            <!-- <i class="fe-database mdi-24px"></i> -->
+                            <h3><span data-plugin="counterup">13318117</span> m<sup>3</sup></h3>
+                            <p class="text-muted font-15 mb-0">Umumiy</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-2 text-center">
+                            <!-- <i class="fe-database  mdi-24px"></i> -->
+                            <h3> <span data-plugin="counterup">5046272</span> m<sup>3</sup></h3>
+                            <p class="text-muted font-15 mb-0">Oylik</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-2 text-center">
+                            <!-- <i class="fe-database  mdi-24px"></i> -->
+                            <h3><span data-plugin="counterup">174389</span> m<sup>3</sup></h3>
+                            <p class="text-muted font-15 mb-0">Kunlik</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-2 text-center">
+                            <!-- <i class="fe-database text-blue mdi-24px"></i> -->
+                            <h3><span data-plugin="counterup">8640</span> m<sup>3</sup>/soat</h3>
+                            <p class="text-muted font-15 mb-0">
+                                Soat
+                            </p>
+                        </div>
+                    </div>
+
+                </div> <!-- end row -->
+            </div>
+        </div>
+        <!-- end row-->
+
+        <div class="row">
+
+            <!-- end col-->
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body pb-2">
+                        <div class="float-end d-none d-md-inline-block">
+                            <div class="btn-group mb-2">
+                                <button type="button" class="btn btn-xs btn-light">Kunlik</button>
+                                <button type="button" class="btn btn-xs btn-light">Oylik</button>
+                                <button type="button" class="btn btn-xs btn-secondary">Ummiy</button>
+                            </div>
+                        </div>
+
+                        <h4 class="header-title mb-3">Quvurdan o'tayotgan suv hajmi</h4>
+
+                        <div dir="ltr">
+                            <div id="sales-analytics" class="mt-4" data-colors="#1abc9c,#4a81d4"></div>
+                        </div>
+                    </div>
+                </div> <!-- end card -->
+            </div> <!-- end col-->
+        </div>
+        <!-- end row -->
+
+
+        <!-- end row -->
+
+    </div> <!-- container -->
+
+</div>

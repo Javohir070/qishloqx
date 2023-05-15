@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<div class="content">
+
+    <!-- Start Content-->
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <!-- <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Ecommerce</a></li>
+                            <li class="breadcrumb-item active">Customers</li> -->
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Viloyatlar kesimida qurilmalar haqida ma'lumotlar</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card widget-inline">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-2 text-center">
+                                    <!-- <i class="fe-database mdi-24px"></i> -->
+                                    <h3><span data-plugin="counterup">13318117</span> m<sup>3</sup></h3>
+                                    <p class="text-muted font-15 mb-0">Umumiy</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-2 text-center">
+                                    <!-- <i class="fe-database  mdi-24px"></i> -->
+                                    <h3> <span data-plugin="counterup">5046272</span> m<sup>3</sup></h3>
+                                    <p class="text-muted font-15 mb-0">Oylik</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-2 text-center">
+                                    <!-- <i class="fe-database  mdi-24px"></i> -->
+                                    <h3><span data-plugin="counterup">174389</span> m<sup>3</sup></h3>
+                                    <p class="text-muted font-15 mb-0">Kunlik</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-2 text-center">
+                                    <!-- <i class="fe-database text-blue mdi-24px"></i> -->
+                                    <h3><span data-plugin="counterup">8640</span> m<sup>3</sup>/soat</h3>
+                                    <p class="text-muted font-15 mb-0">
+                                        Soat
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div> <!-- end row -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-sm-4">
+                                <a href="javascript:void(0);" class="btn btn-danger mb-2"><i
+                                        class="mdi mdi-plus-circle me-2"></i> Malumot qo'shish</a>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="text-sm-end">
+                                    <button type="button" class="btn btn-success mb-2 me-1"><i
+                                            class="mdi mdi-cog"></i></button>
+                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
+                                    <button type="button" class="btn btn-light mb-2">Export</button>
+                                </div>
+                            </div><!-- end col-->
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-centered table-striped dt-responsive nowrap w-100"
+                                id="products-datatable">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 20px;">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                            </div>
+                                        </th>
+                                        <th>S/N</th>
+                                        <th>StartDate</th>
+                                        <th>Umumiy malumot</th>
+                                        <th>Oy malumot</th>
+                                        <th>Kun malumot</th>
+                                        <th>Soat malumot</th>
+                                        <th>Viloyat</th>
+                                        <th>Tuman</th>
+                                        <th style="width: 75px;">Harakat</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+
+
+
+                                            </div>
+                                        </td>
+                                        <td class="table-user">
+
+                                            <a href="javascript:void(0);"
+                                                class="text-body fw-semibold">869300037587247</a>
+                                        </td>
+                                        <td id="demo-item"></td>
+                                        <script>
+                                            const dateObj = new Date();
+
+                                            let year = dateObj.getFullYear();
+
+                                            let month = dateObj.getMonth();
+                                            month = ('0' + (month + 1)).slice(-2);
+                                            // To make sure the month always has 2-character-format. For example, 1 => 01, 2 => 02
+
+                                            let date = dateObj.getDate();
+                                            date = ('0' + date).slice(-2);
+                                            // To make sure the date always has 2-character-format
+
+                                            let hour = dateObj.getHours();
+                                            hour = ('0' + hour).slice(-2);
+                                            // To make sure the hour always has 2-character-format
+
+                                            let minute = dateObj.getMinutes();
+                                            minute = ('0' + minute).slice(-2);
+                                            // To make sure the minute always has 2-character-format
+
+                                            let second = dateObj.getSeconds();
+                                            second = ('0' + second).slice(-2);
+                                            // To make sure the second always has 2-character-format
+
+                                            const time = `${year}/${month}/${date} ${hour}:${minute}:${second}`;
+
+                                            document.getElementById("demo-item").innerHTML = time;
+                                        </script>
+                                        <td>
+                                            13 318 117,0
+                                        </td>
+                                        <td>
+                                            5 046 272,0
+                                        </td>
+                                        <td>
+                                            174 389,66
+                                        </td>
+                                        <td>
+                                            8 640,0
+                                        </td>
+                                        <td>
+                                            Toshkent
+                                        </td>
+                                        <td>
+                                            Oʻrta Chirchiq
+                                        </td>
+
+                                        <td>
+                                            <a href="javascript:void(0);" class="action-icon"> <i
+                                                    class="mdi mdi-square-edit-outline"></i></a>
+                                            <a href="/news_delete/65/" class="action-icon"> <i
+                                                    class="mdi mdi-delete"></i></a>
+                                        </td>
+                                    </tr>
+
+
+
+
+
+
+                                </tbody>
+
+
+                            </table>
+                        </div>
+                    </div> <!-- end card-body-->
+                </div> <!-- end card-->
+            </div> <!-- end col -->
+        </div>
+        <!-- end row -->
+
+    </div> <!-- container -->
+
+</div>
+
+{% endblock main %}

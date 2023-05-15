@@ -1,0 +1,27 @@
+{% load static %}
+<script src="{% static 'static/js/semantic.js' %}"></script>
+
+
+
+<form action="" method="post">  {% csrf_token %}
+    <div class="ui selection dropdown" >
+        <input type="hidden" name="province">
+        <i class="dropdown icon"></i>
+        <div class="default text"> Gender</div>
+        <div class="menu" id="cars-data-box">
+            {% for i in qs  %}
+                <div class="item" data-value="{{ i }}">{{ i.title }}</div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="ui selection dropdown" >
+        <input type="hidden" name="subprovince">
+        <i class="dropdown icon"></i>
+        <div class="default text"> Gender</div>
+        <div class="menu" id="model-data-box">
+            {% for i in qs  %}
+                <div class="item" data-value="{{ i }}">{{ i.title }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</form>
